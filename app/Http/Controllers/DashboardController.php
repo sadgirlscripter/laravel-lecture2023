@@ -9,6 +9,7 @@ use App\Charts\SalesChart;
 use App\Charts\ItemChart;
 use DB;
 
+
 class DashboardController extends Controller
 {
     public function __construct()
@@ -33,7 +34,7 @@ class DashboardController extends Controller
     }
     public function index()
     {
-        Debugbar::info($customer);
+        // Debugbar::info($customer);
         $customer = DB::table('customer')
             ->whereNotNull('title')
             ->groupBy('title')
