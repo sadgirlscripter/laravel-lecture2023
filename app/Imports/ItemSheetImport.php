@@ -18,9 +18,9 @@ class ItemSheetImport implements ToCollection, WithHeadingRow
         foreach ($rows as $row) {
          
             $item = Item::create([
-                'description' => $row['item_name'],
-                'cost_price' => $row['cost'],
-                'sell_price' => $row['selling_price'],
+                'description' => $row['description'],
+                'cost_price' => $row['cost_price'],
+                'sell_price' => $row['sell_price'],
                 'image_path' => 'default.jpg',
                 'title' => NULL,
             ]);

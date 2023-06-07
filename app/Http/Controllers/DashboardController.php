@@ -49,7 +49,7 @@ class DashboardController extends Controller
         // dd($dataset);
         $dataset = $customerChart->dataset(
             'Customer Demographics',
-            'outlabeledPie',
+            'pie',
             array_values($customer)
         );
         // dd($customerChart);
@@ -149,6 +149,15 @@ class DashboardController extends Controller
                     'display' => true,
                 ],
             ],
+            "plugins" => '{ datalabels: {
+                color: \'green\',
+                anchor: \'end\',
+                align: \'end\',
+                borderRadius: \'4\',
+                backgroundColor: \'#DDF8E8\',
+                font: { weight: \'bold\',
+                         size: \'24\' }
+                }}',
         ]);
 
         $sales = DB::table('orderinfo AS o')
@@ -214,6 +223,15 @@ class DashboardController extends Controller
                     ],
                 ],
             ],
+            "plugins" => '{ datalabels: {
+                color: \'green\',
+                anchor: \'end\',
+                align: \'end\',
+                borderRadius: \'4\',
+                backgroundColor: \'#DDF8E8\',
+                font: { weight: \'bold\',
+                         size: \'24\' }
+                }}',
         ]);
 
         $items = DB::table('orderline AS ol')
