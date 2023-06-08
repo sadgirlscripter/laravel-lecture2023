@@ -102,7 +102,7 @@ class DashboardController extends Controller
                 size: 36 },
                 color: \'white\',
        }}',
-            "{outlabels: {display: true}}",
+            // "{outlabels: {display: true}}",
         ]);
 
         $town = DB::table('customer')
@@ -284,12 +284,12 @@ class DashboardController extends Controller
                 ],
             ],
             "anchor" => "end",
-            "offset" => 4,
+            "offset" => 2,
             "padding" => 0,
             "align" => "top",
             "aspectRatio" => 1,
             "plugins" => '{ datalabels: {
-                            color: \'green\',
+                            color: \'red\',
                             anchor: \'end\',
                             align: \'end\',
                             borderRadius: \'4\',
