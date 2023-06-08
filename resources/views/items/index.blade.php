@@ -7,7 +7,9 @@
            {{ csrf_field() }}
          <input type="file" id="uploadName" name="item_upload" required>
          <button type="submit" class="btn btn-info btn-primary " >Import Excel File</button>
-          d
+          
+
+         
           </form>
           {{-- {{ link_to_route('item.export', 'Export to Excel')}} --}}
         </div>
