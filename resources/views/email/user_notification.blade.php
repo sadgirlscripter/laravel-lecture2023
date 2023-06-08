@@ -8,5 +8,7 @@
 </head>
 <body>
     <h1>Thank you for order ! {{  $order_id }} is being processed </h1>
+    <img src="{{$message->embed(public_path().'/image/logo.png')}}" alt="">
 </body>
+
 </html>

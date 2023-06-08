@@ -15,11 +15,9 @@ class SendUserNotification
      *
      * @return void
      */
-    public function __construct($order, $customer, $email)
+    public function __construct()
     {
-        $this->order = $order;
-        $this->customer = $customer;
-        $this->email = $email;
+      
     }
 
     /**
@@ -33,7 +31,7 @@ class SendUserNotification
         // dd($event);
         $orderinfoId = $event->order->orderinfo_id;
         $email = $event->email;
-        $customer = $event->customer->lname . ' ' . $event->customer->lname;
+        $customer = $event->customer->fname . ' ' . $event->customer->lname;
         Mail::send(
             'email.user_notification',
             ['order_id' => $orderinfoId],
@@ -41,6 +39,7 @@ class SendUserNotification
                 $message->from('admin@test.com', 'Admin');
                 $message->to($email, $customer);
                 $message->subject("Thank you !  {$customer} ");
+                
             }
         );
     }
