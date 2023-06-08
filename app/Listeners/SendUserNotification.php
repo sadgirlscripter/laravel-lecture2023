@@ -15,9 +15,11 @@ class SendUserNotification
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($order, $customer, $email)
     {
-        //
+        $this->order = $order;
+        $this->customer = $customer;
+        $this->email = $email;
     }
 
     /**
