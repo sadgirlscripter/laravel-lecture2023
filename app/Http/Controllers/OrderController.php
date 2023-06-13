@@ -11,6 +11,7 @@ use Auth;
 use App\Models\Order;
 use App\Models\User;
 use App\Mail\SendOrderStatus;
+use Mail;
 
 class OrderController extends Controller
 {

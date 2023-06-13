@@ -12,13 +12,13 @@ use App\Imports\ItemStockImport;
 use App\Imports\ItemCustomerSheetImport;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Rules\ItemExcelRule;
+use App\Events\OrderCreated;
 use Barryvdh\Debugbar\Facade as DebugBar;
 
 use Session;
 use App\Cart;
 use DB;
 use App\DataTables\ItemsDataTable;
-use App\Events\OrderCreated;
 use Auth;
 use Redirect;
 
